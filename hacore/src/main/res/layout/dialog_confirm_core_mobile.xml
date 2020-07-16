@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/qb_px_343"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#2C51B9"
+        android:gravity="center"
+        android:text="@string/scene_delete"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/app_textsize_normal" />
+
+    <TextView
+        android:id="@+id/text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/qb_px_24"
+        android:layout_marginBottom="@dimen/qb_px_48"
+        android:gravity="center"
+        android:paddingStart="@dimen/qb_px_16"
+        android:paddingEnd="@dimen/qb_px_16"
+        android:text="@string/scene_delete_message"
+        android:textColor="@color/dialogTitle"
+        android:textSize="@dimen/app_textsize_medium" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:layout_marginBottom="@dimen/qb_px_16"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/button_cancel"
+            style="@style/ButtonGrayMobile"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/qb_px_16"
+            android:text="@string/cancel" />
+
+        <TextView
+            android:id="@+id/button_ok"
+            style="@style/ButtonRedMobile"
+            android:layout_marginEnd="@dimen/qb_px_16"
+            android:layout_weight="1"
+            android:text="@string/delete"/>
+
+    </LinearLayout>
+
+</LinearLayout>

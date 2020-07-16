@@ -1,0 +1,148 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    useLibrary 'org.apache.http.legacy'
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha01'
+    implementation "androidx.core:core:1.1.0-alpha05"
+    implementation 'androidx.core:core-ktx:1.1.0-alpha05'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+
+    api "com.google.android.material:material:$rootProject.ext.version_code_material_design"
+    api "androidx.cardview:cardview:$rootProject.ext.version_core_androidx_support"
+    api "androidx.cardview:cardview:$rootProject.ext.version_core_androidx_support"
+    api "androidx.recyclerview:recyclerview:$rootProject.ext.version_core_androidx_support"
+    api "androidx.recyclerview:recyclerview-selection:$rootProject.ext.version_code_lifecycle_selection"
+    api "androidx.navigation:navigation-fragment:$rootProject.ext.version_code_nav" // For Kotlin use navigation-fragment-ktx
+    api "androidx.navigation:navigation-ui:$rootProject.ext.version_code_nav"
+    api "androidx.viewpager2:viewpager2:1.0.0"
+
+
+    // android architecture component
+    api "androidx.lifecycle:lifecycle-extensions:$rootProject.ext.version_code_lifecycle"
+    api "androidx.lifecycle:lifecycle-runtime:$rootProject.ext.version_code_lifecycle"
+    kapt "androidx.lifecycle:lifecycle-compiler:$rootProject.ext.version_code_lifecycle"
+
+    api "androidx.room:room-runtime:$rootProject.ext.version_code_room"
+    kapt "androidx.room:room-compiler:$rootProject.ext.version_code_room"
+    api "androidx.room:room-rxjava2:$rootProject.ext.version_code_room"
+
+    // reactive
+    api "io.reactivex.rxjava2:rxjava:$rootProject.ext.version_code_rxjava"
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.version_code_rxandroid"
+
+    // material dialog
+    api "com.afollestad.material-dialogs:core:$rootProject.ext.version_code_material_dialog"
+//    api "com.afollestad.material-dialogs:core:0.9.1.0"
+//    api "com.afollestad.material-dialogs:commons:0.9.1.0"
+    api "com.afollestad.material-dialogs:input:$rootProject.ext.version_code_material_dialog"
+    api "com.afollestad.material-dialogs:files:$rootProject.ext.version_code_material_dialog"
+    api "com.afollestad.material-dialogs:color:$rootProject.ext.version_code_material_dialog"
+    api "com.afollestad.material-dialogs:datetime:$rootProject.ext.version_code_material_dialog"
+    api "com.afollestad.material-dialogs:lifecycle:$rootProject.ext.version_code_material_dialog"
+
+    api 'com.prolificinteractive:material-calendarview:1.4.3'
+
+    implementation "com.afollestad:rxkprefs:1.2.5"
+
+    implementation "com.afollestad.material-dialogs:core:2.1.0"
+    implementation "com.afollestad.material-dialogs:input:2.1.0"
+
+    // network
+    api "com.squareup.retrofit2:retrofit:$rootProject.ext.version_code_retrofit"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.version_code_retrofit"
+    api "com.squareup.retrofit2:adapter-rxjava2:$rootProject.ext.version_code_retrofit"
+    api "com.squareup.okhttp3:okhttp:3.11.0"
+    api "com.squareup.okhttp3:logging-interceptor:3.10.0"
+
+    api 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
+    api "org.eclipse.paho:org.eclipse.paho.android.service:1.1.1"
+
+    api "io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:2.0.0"
+
+    api 'com.facebook.stetho:stetho:1.5.0'
+    api 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    api 'com.facebook.stetho:stetho-js-rhino:1.4.2'
+
+
+    api "org.jetbrains.anko:anko:$rootProject.ext.version_code_anko"
+    api "org.jetbrains.anko:anko-commons:$rootProject.ext.version_code_anko"
+    api "org.jetbrains.anko:anko-design:$rootProject.ext.version_code_anko"
+
+    api 'org.apache.commons:commons-compress:1.18'
+    api 'com.daimajia.androidanimations:library:2.3@aar'
+
+    implementation 'com.github.nikartm:image-support:1.0.5'
+
+    // image
+    api "com.github.bumptech.glide:glide:$rootProject.ext.version_code_glide"
+    implementation ("com.github.bumptech.glide:recyclerview-integration:$rootProject.ext.version_code_glide") {
+        transitive = false
+    }
+
+    api "com.github.bumptech.glide:okhttp3-integration:$rootProject.ext.version_code_glide"
+
+    kapt "com.github.bumptech.glide:compiler:$rootProject.ext.version_code_glide"
+
+    testImplementation 'junit:junit:4.12'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // debugging
+    api 'com.jakewharton.timber:timber:4.7.1'
+    api 'com.github.f0ris.sweetalert:library:1.5.6'
+    api 'com.karumi:dexter:5.0.0'
+
+    androidTestImplementation 'junit:junit:4.12'
+}
+repositories {
+    mavenCentral()
+}

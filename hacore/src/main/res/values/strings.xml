@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_brand_name">Homa</string>
+
+    <string name="calendar_mon">Mon</string>
+    <string name="calendar_tue">Tue</string>
+    <string name="calendar_wed">Wed</string>
+    <string name="calendar_thu">Thu</string>
+    <string name="calendar_fri">Fri</string>
+    <string name="calendar_sat">Sat</string>
+    <string name="calendar_sun">Sun</string>
+
+    <string-array name="week_sun_sat">
+        <item>@string/calendar_sun</item>
+        <item>@string/calendar_mon</item>
+        <item>@string/calendar_tue</item>
+        <item>@string/calendar_wed</item>
+        <item>@string/calendar_thu</item>
+        <item>@string/calendar_fri</item>
+        <item>@string/calendar_sat</item>
+    </string-array>
+
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="title_time_picker">Select Time</string>
+    <string name="select_time">Select a Time</string>
+    <string name="common_photos">Photos</string>
+    <string name="select">Select</string>
+
+    <string name="agree">Agree</string>
+    <string name="scene_delete">Delete scene</string>
+    <string name="scene_delete_message">Do you want to delete this scene?</string>
+    <string name="scene_is_activated">This scene is activated</string>
+
+    <string name="data_changed">Data changed</string>
+    <string name="do_you_want_to_save">Do you want to save?</string>
+    <string name="save">Save</string>
+    <string name="no">No</string>
+
+    <string name="channel">Channel</string>
+    <string name="your_channel_number">Enter your channel</string>
+    <string name="delete">Delete</string>
+
+    <string name="remove">Remove</string>
+    <string name="device_remove">Remove device</string>
+    <string name="device_remove_message">Do you want to remove this device?</string>
+
+    <string name="media_playback">Media Playback</string>
+    <string name="media_playback_controls">Media playback controls</string>
+
+    <string name="durationformatshort" translatable="false"><xliff:g id="format">%2$d:%3$02d</xliff:g></string>
+    <string name="durationformatlong" translatable="false"><xliff:g id="format">%1$d:%2$02d:%3$02d</xliff:g></string>
+
+    <string name="logout">Logout</string>
+    <string name="logout_message">Do you want to logout?</string>
+    <string name="connection_timed_out">Connection timed out. Please try again.</string>
+
+    <string name="your_home_service_was_disconnected">Your home service was disconnected. Please check and try again.</string>
+    <string name="hm_error_api_network_timeout">Network timeout, please check your internet connection and try again.</string>
+    <string name="hm_error_api_no_internet">Network error, please check your internet connection and try again.</string>
+    <string name="hm_error_api_unknown">Unknown error while processing your request.</string>
+    <string name="hm_error_api_unknown_server">Internal server error, please contact administrator.</string>
+
+</resources>

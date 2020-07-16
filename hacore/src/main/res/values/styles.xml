@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bg_header_bar</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
+        <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark
+        </item>
+        <item name="android:textColorTertiary">@color/abc_secondary_text_material_light</item>
+        <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_dark</item>
+        <item name="android:textColorPrimaryDisableOnly">
+            @color/abc_primary_text_disable_only_material_light
+        </item>
+        <item name="android:textColorPrimaryInverseDisableOnly">
+            @color/abc_primary_text_disable_only_material_dark
+        </item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:textColorHintInverse">@color/colorWhite</item>
+        <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
+        <item name="android:textColorLink">?attr/colorAccent</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="alertDialogTheme">@style/dialog</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:fontFamily">@font/baijamjuree_medium</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <item name="md_font_title">@font/baijamjuree_medium</item>
+        <item name="md_font_body">@font/baijamjuree_medium</item>
+        <item name="md_font_button">@font/baijamjuree_medium</item>
+        <item name="md_color_title">@android:color/black</item>
+        <item name="md_color_content">@android:color/black</item>
+        <item name="md_color_button_text">@android:color/black</item>
+
+    </style>
+
+    <style name="dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/colorButtonPrimary</item>
+        <item name="android:colorPrimary">@color/colorButtonPrimary</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:colorAccent">@color/colorBlack</item>
+    </style>
+
+    <style name="WeekDayTitleStyle">
+        <item name="android:layout_width">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:layout_height">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:textSize">@dimen/app_textsize_small</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/calendar_date_color</item>
+        <item name="android:paddingBottom">@dimen/dayOfMonthPaddingBottom</item>
+    </style>
+
+    <style name="DayOfMonthStyle">
+        <item name="android:layout_width">@dimen/dayOfMonthSize</item>
+        <item name="android:layout_height">@dimen/dayOfMonthSize</item>
+        <item name="android:textSize">@dimen/text_size_date</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">@dimen/dayOfMonthMinHeight</item>
+        <item name="android:minWidth">@dimen/dayOfMonthMinWidth</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:paddingBottom">@dimen/dayOfMonthPaddingBottom</item>
+        <item name="android:textColor">@color/calendar_default_date_color</item>
+    </style>
+
+    <style name="ContainerDayOfWeek">
+        <item name="android:layout_width">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:layout_height">@dimen/dayOfMonthBoxSize</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="StripRange">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/strip_height</item>
+        <item name="android:background">@color/calendar_range_bg_color</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="CoreTheme.Dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <!--        <item name="android:windowBackground">@drawable/all_style_dialog</item>-->
+    </style>
+
+    <style name="CoreTheme.Dialog.Anim.Fade" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="CoreTheme.Dialog.Title" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/margin</item>
+        <item name="android:paddingRight">@dimen/margin</item>
+    </style>
+
+    <style name="AppTheme.Button.Base" parent="TextAppearance.AppCompat">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CoreTheme.Button" parent="TextAppearance.AppCompat">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="CoreTheme.Button.Primary" parent="CoreTheme.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/all_style_button_primary</item>
+    </style>
+
+    <style name="CoreTheme.Button.Secondary" parent="CoreTheme.Button">
+        <item name="android:textColor">#4272BA</item>
+        <item name="android:background">@drawable/all_style_button_secondary</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/app_textsize_large</item>
+        <item name="android:paddingStart">@dimen/app_spacing_xlarge</item>
+        <item name="android:paddingEnd">@dimen/app_spacing_xlarge</item>
+        <item name="android:paddingTop">@dimen/app_spacing_medium</item>
+        <item name="android:paddingBottom">@dimen/app_spacing_medium</item>
+        <item name="android:minWidth">160dp</item>
+    </style>
+
+
+    <!--    Mobile-->
+    <style name="MobileTheme.Button" parent="TextAppearance.AppCompat">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MobileTheme.Button.Border.Gray.Mobile" parent="MobileTheme.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:background">@drawable/all_style_button_border_gray_mobile</item>
+    </style>
+
+    <style name="MobileTheme.Button.Border.Red.Mobile" parent="MobileTheme.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorRedDark</item>
+        <item name="android:background">@drawable/all_style_button_border_red_mobile</item>
+    </style>
+
+    <style name="ButtonGrayMobile" parent="CoreTheme.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/app_textsize_medium</item>
+        <item name="android:paddingStart">@dimen/app_spacing_xlarge</item>
+        <item name="android:paddingEnd">@dimen/app_spacing_xlarge</item>
+        <item name="android:paddingTop">@dimen/app_spacing_small</item>
+        <item name="android:paddingBottom">@dimen/app_spacing_small</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:background">@drawable/all_style_button_border_gray_mobile</item>
+    </style>
+
+    <style name="ButtonRedMobile" parent="CoreTheme.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/app_textsize_medium</item>
+        <item name="android:paddingStart">@dimen/app_spacing_xlarge</item>
+        <item name="android:paddingEnd">@dimen/app_spacing_xlarge</item>
+        <item name="android:paddingTop">@dimen/app_spacing_small</item>
+        <item name="android:paddingBottom">@dimen/app_spacing_small</item>
+        <item name="android:textColor">@color/colorRedDark</item>
+        <item name="android:background">@drawable/all_style_button_border_red_mobile</item>
+    </style>
+
+    <style name="MobileTheme.Button.Border.Blue.Mobile" parent="MobileTheme.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorButtonPrimary</item>
+        <item name="android:background">@drawable/all_style_button_border_red_mobile</item>
+    </style>
+
+    <style name="AppTheme.Selectable" parent="AppTheme">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="AppTheme.Text" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.Dialog.Title" parent="AppTheme.Text">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/margin</item>
+        <item name="android:paddingRight">@dimen/margin</item>
+    </style>
+
+    <style name="AppTheme.Dialog.Text" parent="AppTheme.Text">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/margin</item>
+        <item name="android:paddingRight">@dimen/margin</item>
+    </style>
+</resources>

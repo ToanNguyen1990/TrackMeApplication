@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RatioImageView">
+        <attr name="showPercentHeight" format="boolean" />
+        <attr name="percentHeight" format="float" />
+        <attr name="percentWidth" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayout">
+        <attr name="drag_edge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="leftEdgeSwipeOffset" format="dimension" />
+        <attr name="rightEdgeSwipeOffset" format="dimension" />
+        <attr name="topEdgeSwipeOffset" format="dimension" />
+        <attr name="bottomEdgeSwipeOffset" format="dimension" />
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0" />
+            <enum name="pull_out" value="1" />
+        </attr>
+        <attr name="clickToClose" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DateRangeMonthView">
+        <attr name="title_color" format="color" />
+        <attr name="week_color" format="color" />
+        <attr name="range_color" format="color" />
+        <attr name="selected_date_circle_color" format="color" />
+        <attr name="selected_date_color" format="color" />
+        <attr name="default_date_color" format="color" />
+        <attr name="range_date_color" format="color" />
+        <attr name="disable_date_color" format="color" />
+        <attr name="enable_time_selection" format="boolean" />
+        <attr name="text_size_title" format="dimension" />
+        <attr name="text_size_week" format="dimension" />
+        <attr name="text_size_date" format="dimension" />
+        <attr name="header_bg" format="integer" />
+        <attr name="calendar_tag" format="string" />
+        <attr name="week_offset" format="integer" />
+        <attr name="enable_past_date" format="boolean" />
+        <attr name="editable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level" value="1" />
+        </attr>
+
+        <attr name="flingVelocity" format="integer" />
+
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ToolBar">
+        <attr name="layoutType" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+        </attr>
+        <attr name="title" format="string" />
+        <attr name="titleRight" format="string" />
+        <attr name="titleSize" format="dimension" />
+        <attr name="titleRightSize" format="dimension" />
+        <attr name="titleColor" format="color" />
+        <attr name="titleRightColor" format="color" />
+        <attr name="hm_background" format="color|reference" />
+        <attr name="hm_drawableLeft" format="reference" />
+        <attr name="hm_drawableRight" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="WeekView">
+        <attr name="week_start_with" format="enum">
+            <enum name="sun" value="1" />
+            <enum name="mon" value="2" />
+            <enum name="tue" value="3" />
+            <enum name="wed" value="4" />
+            <enum name="thu" value="5" />
+            <enum name="fri" value="6" />
+            <enum name="sat" value="7" />
+        </attr>
+
+        <attr name="week_time_type" format="enum">
+            <enum name="_24h" value="1" />
+            <enum name="_12h" value="2" />
+        </attr>
+
+        <attr name="week_hour_height" format="dimension" />
+        <attr name="week_time_height" format="dimension" />
+        <attr name="week_min_hour_height" format="dimension" />
+        <attr name="week_max_hour_height" format="dimension" />
+
+        <attr name="week_header_height" format="dimension" />
+        <attr name="week_min_header_height" format="dimension" />
+        <attr name="week_max_header_height" format="dimension" />
+
+        <attr name="week_time_zone_text_size" format="dimension" />
+        <attr name="week_time_text_size" format="dimension" />
+        <attr name="week_header_day_name_text_size" format="dimension" />
+        <attr name="week_header_day_number_text_size" format="dimension" />
+        <attr name="week_event_text_size" format="dimension" />
+
+        <attr name="week_time_text_color" format="color" />
+        <attr name="week_event_text_color" format="color" />
+        <attr name="week_header_day_name_text_color" format="color" />
+        <attr name="week_header_day_number_text_color" format="color" />
+        <attr name="week_header_today_name_text_color" format="color" />
+        <attr name="week_header_today_number_text_color" format="color" />
+        <attr name="week_line_color" format="color" />
+
+        <attr name="week_header_background_color" format="color" />
+        <attr name="week_header_day_background_color" format="color" />
+        <attr name="week_header_today_background_color" format="color" />
+        <attr name="week_header_selected_day_background_color" format="color" />
+        <attr name="week_header_today_line_color" format="color" />
+        <attr name="week_header_selected_day_line_color" format="color" />
+
+        <attr name="week_day_background_color" format="color" />
+        <attr name="week_today_background_color" format="color" />
+        <attr name="week_selected_day_background_color" format="color" />
+
+    </declare-styleable>
+
+    <declare-styleable name="HorizontalCalendarView">
+        <!-- Default text color for all texts -->
+        <attr name="textColorNormal" format="color" />
+        <!-- Default top text color -->
+        <attr name="colorTopText" format="color" />
+        <!-- Default Middle text color -->
+        <attr name="colorMiddleText" format="color" />
+        <!-- Default Bottom text color -->
+        <attr name="colorBottomText" format="color" />
+
+        <!-- Selected item's text color for all texts -->
+        <attr name="textColorSelected" format="color" />
+        <!-- Selected item's top text color -->
+        <attr name="colorTopTextSelected" format="color" />
+        <!-- Selected item's Middle text color -->
+        <attr name="colorMiddleTextSelected" format="color" />
+        <!-- Selected item's Bottom text color -->
+        <attr name="colorBottomTextSelected" format="color" />
+        <!-- Selected item's background drawable -->
+        <attr name="selectedDateBackground" format="reference" />
+
+        <!-- Background color for selector bar. -->
+        <attr name="selectorColor" format="color" />
+
+        <!-- Top text size -->
+        <attr name="sizeTopText" format="dimension" />
+        <!-- Middle text size -->
+        <attr name="sizeMiddleText" format="dimension" />
+        <!-- Bottom text size -->
+        <attr name="sizeBottomText" format="dimension" />
+
+    </declare-styleable>
+
+</resources>

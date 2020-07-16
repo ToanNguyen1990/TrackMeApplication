@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlHeaderCalendar"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <net.toannt.hacore.ui.widget.calendar.customviews.CustomTextView
+        android:id="@+id/txtLeftMonthHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="May 2019"
+        android:textColor="#668EB3EE"
+        android:textSize="13sp"
+        android:paddingStart="@dimen/app_spacing_medium"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"/>
+
+    <net.toannt.hacore.ui.widget.calendar.customviews.CustomTextView
+        android:id="@+id/tvYearTitle"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="@dimen/app_spacing_xsmall"
+        android:paddingBottom="@dimen/app_spacing_xsmall"
+        android:tag="dateTitle"
+        tools:text="Jun 2019"
+        android:textColor="#8EB3EE"
+        android:textSize="@dimen/app_textsize_normal"/>
+
+    <net.toannt.hacore.ui.widget.calendar.customviews.CustomTextView
+        android:id="@+id/txtRightMonthHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="July 2019"
+        android:textColor="#668EB3EE"
+        android:textSize="13sp"
+        android:paddingEnd="@dimen/app_spacing_medium"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

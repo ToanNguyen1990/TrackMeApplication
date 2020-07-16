@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "net.nvtoan.trackme"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    applicationVariants.all { variant ->
+        changeAPKName(variant)
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [crashlyticsEnabled: true, analyticsEnabled: true]
+        }
+
+        debug {
+            debuggable true
+            manifestPlaceholders = [crashlyticsEnabled: false, analyticsEnabled: false]
+        }
+    }
+
+}
+
+static def getDate() {
+    return new Date().format('yyyyMMdd')
+}
+
+def changeAPKName(variant) {
+    variant.outputs.all { output ->
+        def versionName = variant.versionName
+        outputFileName = "${getDate()}_track_me_app_${versionName}.apk"
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$rootProject.ext.nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$rootProject.ext.nav_version"
+
+    api "androidx.room:room-runtime:$rootProject.ext.version_code_room"
+    kapt "androidx.room:room-compiler:$rootProject.ext.version_code_room"
+    api "androidx.room:room-rxjava2:$rootProject.ext.version_code_room"
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    api "com.google.android.gms:play-services-location:$rootProject.ext.version_location"
+
+
+    implementation project(path: ':hacore')
+}
