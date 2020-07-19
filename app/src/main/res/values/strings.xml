@@ -1,3 +1,35 @@
 <resources>
 	<string name="app_name">TrackMe</string>
+	<string name="app_notification_channel_id_updated_location" translatable="false">app_notification_channel_id_updated_location</string>
+	<string name="app_notification_channel_name_updated_location" translatable="false">app_notification_channel_name_updated_location</string>
+
+	// bottom navigation menu
+	<string name="app_menu_history">History</string>
+	<string name="app_menu_training">Training</string>
+	<string name="app_menu_setting">Setting</string>
+
+	// dialog
+	<string name="cancel">Cancel</string>
+	<string name="ok">Ok</string>
+
+	// google play service
+	<string name="device_no_support_google_play_service">Device is not supported google play service</string>
+
+	// training
+	<string name="distance_default">0.00</string>
+	<string name="duration_default">00.00</string>
+	<string name="speed_default">0.0</string>
+	<string name="km">Km</string>
+	<string name="duration">Duration</string>
+	<string name="speed">Speed</string>
+
+	<string name="start">Start</string>
+	<string name="pause">Pause</string>
+	<string name="resume">Resume</string>
+	<string name="finish">Finish</string>
+
+	// history
+	<string name="distance">Distance</string>
+	<string name="average_speed">Avg. Speed</string>
+	<string name="no_session">No Session</string>
 </resources>

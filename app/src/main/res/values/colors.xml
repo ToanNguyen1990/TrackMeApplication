@@ -3,4 +3,9 @@
 	<color name="colorPrimary">#6200EE</color>
 	<color name="colorPrimaryDark">#3700B3</color>
 	<color name="colorAccent">#03DAC5</color>
+
+	<color name="colorBgBottomNavigation">#4D142544</color>
+	<color name="colorBgTraining">@color/colorWhite</color>
+	<color name="colorTraining">@android:color/black</color>
+	<color name="colorLabelDefault">#a9b6d0</color>
 </resources>

@@ -1,6 +1,12 @@
 package net.nvtoan.trackme
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.os.Build
 import android.os.StrictMode
+import androidx.annotation.RequiresApi
+import androidx.annotation.StringRes
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
@@ -22,7 +28,6 @@ class TrackMeApplication: MultiDexApplication(), LifecycleObserver {
         StrictMode.setVmPolicy(builder.build())
         Timber.plant(DebugTree())
 
-
         TrackMeDatabase.initDatabase(this)
     }
 
@@ -35,4 +40,6 @@ class TrackMeApplication: MultiDexApplication(), LifecycleObserver {
     fun onAppForegrounded() {
         hasAppForegrounded = true
     }
+
+
 }

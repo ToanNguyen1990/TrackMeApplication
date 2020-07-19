@@ -19,7 +19,6 @@
     <color name="calendar_range_bg_color">#B7C99D</color>
     <color name="calendar_text">#474747</color>
 
-    <color name="colorWhite">@android:color/white</color>
     <color name="dialogPrimaryBackground">#2C51B9</color>
     <color name="dialogSecondaryStroke">#4272BA</color>
     <color name="dialogSecondaryBackground">@android:color/transparent</color>
@@ -50,5 +49,31 @@
     <color name="colorDisableView">#4D2C51B9</color>
 
     <color name="color_index">#3B92BF</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorButtonText">#FFFFFF</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorButtonStrole">#3F4C65</color>
+    <color name="colorBlueTitle">#3ACAFF</color>
+    <color name="colorHeader">#008dd2</color>
+
+    <color name="colorWhiteTransparent10">#1AFFFFFF</color>
+    <color name="colorWhiteTransparent15">#26FFFFFF</color>
+    <color name="colorWhiteTransparent20">#33FFFFFF</color>
+    <color name="colorWhiteTransparent25">#40FFFFFF</color>
+    <color name="colorWhiteTransparent30">#4DFFFFFF</color>
+    <color name="colorWhiteTransparent40">#64FFFFFF</color>
+    <color name="colorWhiteTransparent50">#80FFFFFF</color>
+    <color name="colorWhiteTransparent60">#96FFFFFF</color>
+    <color name="colorWhiteTransparent70">#B3FFFFFF</color>
+    <color name="colorWhiteTransparent80">#CCFFFFFF</color>
+    <color name="colorBlackTransparent10">#1A000000</color>
+    <color name="colorBlackTransparent15">#26000000</color>
+    <color name="colorBlackTransparent20">#33000000</color>
+    <color name="colorBlackTransparent40">#64000000</color>
+    <color name="colorBlackTransparent50">#80000000</color>
+    <color name="colorBlackTransparent60">#96000000</color>
+    <color name="colorBlackTransparent70">#B3000000</color>
+    <color name="colorBlackTransparent80">#CC000000</color>
 
 </resources>

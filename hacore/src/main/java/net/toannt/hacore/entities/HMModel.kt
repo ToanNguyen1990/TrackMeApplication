@@ -1,12 +1,10 @@
 package net.toannt.hacore.entities
 
-import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import java.io.Serializable
-import java.util.*
 
 @Entity
 abstract class HMModel : Serializable {

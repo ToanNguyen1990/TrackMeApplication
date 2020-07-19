@@ -17,6 +17,11 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     dataBinding {
         enabled = true
     }
@@ -74,9 +79,15 @@ dependencies {
     kapt "androidx.room:room-compiler:$rootProject.ext.version_code_room"
     api "androidx.room:room-rxjava2:$rootProject.ext.version_code_room"
 
+    // google play services
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     api "com.google.android.gms:play-services-location:$rootProject.ext.version_location"
+    implementation 'com.google.maps.android:android-maps-utils:2.0.3'
 
+    // ui
+    api 'com.karumi:dexter:5.0.0'
+    api  'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    api 'com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:2.0.0'
 
     implementation project(path: ':hacore')
 }

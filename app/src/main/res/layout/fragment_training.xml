@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="presenter"
+            type="net.nvtoan.trackme.app.ui.home.TrainingFragment.TrainingPresenter" />
+
+        <import type="net.nvtoan.trackme.app.ui.home.TrainingViewModel.RecordEnumType" />
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBgTraining">
+
+        <TextView
+            android:id="@+id/txtDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/qb_px_24"
+            android:fontFamily="@font/baijamjuree_light"
+            android:includeFontPadding="false"
+            android:text="@string/distance_default"
+            android:textAllCaps="true"
+            android:textColor="@color/colorTraining"
+            android:textSize="@dimen/app_text_size_40sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtDistanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/qb_px_4"
+            android:fontFamily="@font/baijamjuree_regular"
+            android:includeFontPadding="false"
+            android:text="@string/km"
+            android:textColor="@color/colorLabelDefault"
+            android:textSize="@dimen/app_text_size_14sp"
+            app:layout_constraintEnd_toEndOf="@id/txtDistance"
+            app:layout_constraintStart_toStartOf="@id/txtDistance"
+            app:layout_constraintTop_toBottomOf="@id/txtDistance" />
+
+        <TextView
+            android:id="@+id/txtDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/qb_px_48"
+            android:fontFamily="@font/baijamjuree_light"
+            android:includeFontPadding="false"
+            android:text="@string/duration_default"
+            android:textColor="@color/colorTraining"
+            android:textSize="@dimen/app_text_size_24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDistanceLabel" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baijamjuree_regular"
+            android:includeFontPadding="false"
+            android:text="@string/duration"
+            android:textColor="@color/colorLabelDefault"
+            android:textSize="@dimen/app_text_size_14sp"
+            app:layout_constraintEnd_toEndOf="@id/txtDuration"
+            app:layout_constraintStart_toStartOf="@id/txtDuration"
+            app:layout_constraintTop_toBottomOf="@id/txtDuration" />
+
+        <TextView
+            android:id="@+id/txtSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/qb_px_48"
+            android:fontFamily="@font/baijamjuree_light"
+            android:includeFontPadding="false"
+            android:text="@string/speed_default"
+            android:textColor="@color/colorTraining"
+            android:textSize="@dimen/app_text_size_24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDistanceLabel" />
+
+        <TextView
+            android:id="@+id/txtSpeedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baijamjuree_regular"
+            android:includeFontPadding="false"
+            android:text="@string/speed"
+            android:textColor="@color/colorLabelDefault"
+            android:textSize="@dimen/app_text_size_14sp"
+            app:layout_constraintEnd_toEndOf="@id/txtSpeed"
+            app:layout_constraintStart_toStartOf="@id/txtSpeed"
+            app:layout_constraintTop_toBottomOf="@id/txtSpeed" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/googleMapView"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/qb_px_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtSpeedLabel" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/qb_px_28"
+            android:fontFamily="@font/baijamjuree_medium"
+            android:includeFontPadding="false"
+            android:minWidth="@dimen/qb_px_140"
+            android:paddingTop="@dimen/qb_px_12"
+            android:paddingBottom="@dimen/qb_px_12"
+            android:text="@string/start"
+            android:textAllCaps="true"
+            android:visibility="@{ presenter.recordEnumObservable == RecordEnumType.STARTED ? View.VISIBLE : View.GONE}"
+            android:textSize="@dimen/app_text_size_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/qb_px_28"
+            android:fontFamily="@font/baijamjuree_medium"
+            android:includeFontPadding="false"
+            android:minWidth="@dimen/qb_px_140"
+            android:paddingTop="@dimen/qb_px_12"
+            android:paddingBottom="@dimen/qb_px_12"
+            android:text="@string/pause"
+            android:textAllCaps="true"
+            android:textSize="@dimen/app_text_size_16sp"
+            android:visibility="@{ presenter.recordEnumObservable == RecordEnumType.RECORDED ? View.VISIBLE : View.GONE }"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <androidx.constraintlayout.widget.Group
+            app:constraint_referenced_ids="btnFinish,btnResume"
+            android:visibility="@{ presenter.recordEnumObservable == RecordEnumType.PAUSED ? View.VISIBLE : View.GONE }"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnResume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/qb_px_36"
+            android:layout_marginBottom="@dimen/qb_px_28"
+            android:fontFamily="@font/baijamjuree_medium"
+            android:includeFontPadding="false"
+            android:minWidth="@dimen/qb_px_140"
+            android:paddingTop="@dimen/qb_px_12"
+            android:paddingBottom="@dimen/qb_px_12"
+            android:text="@string/resume"
+            android:textAllCaps="true"
+            android:textSize="@dimen/app_text_size_16sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnFinish"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/qb_px_28"
+            android:fontFamily="@font/baijamjuree_medium"
+            android:includeFontPadding="false"
+            android:minWidth="@dimen/qb_px_140"
+            android:paddingTop="@dimen/qb_px_12"
+            android:paddingBottom="@dimen/qb_px_12"
+            android:text="@string/finish"
+            android:textSize="@dimen/app_text_size_16sp"
+            android:visibility="visible"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnResume" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

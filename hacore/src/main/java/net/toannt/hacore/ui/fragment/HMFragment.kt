@@ -57,7 +57,7 @@ abstract class HMFragment : Fragment(), HMControllerBehaviour,
 
     open fun executeOnBackPressed() = Unit
 
-    open fun initUI() = Unit
+    open fun initUI(parentView: View) = Unit
 
     open fun registerObservables() = Unit
 
@@ -161,17 +161,17 @@ abstract class HMFragment : Fragment(), HMControllerBehaviour,
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onViewCreated(parentView: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(parentView, savedInstanceState)
         Timber.i("${this@HMFragment::class.java.simpleName}  ----------- onViewCreated")
-        this@HMFragment.alertHelper = HMAlertHelper(view.context)
+        this@HMFragment.alertHelper = HMAlertHelper(parentView.context)
         (this@HMFragment as? HMViewModelSource<*>)?.let { hmViewModelSource ->
             hmViewModelSource.viewModel.isNetworkBusy = MutableLiveData()
         }
 
-        initUI()
+        initUI(parentView)
         registerObservables()
-        this@HMFragment.onContentViewCreated(view, savedInstanceState)
+        this@HMFragment.onContentViewCreated(parentView, savedInstanceState)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

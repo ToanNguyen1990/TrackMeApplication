@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import net.nvtoan.trackme.app.db.dao.HistoryDao
 import net.nvtoan.trackme.app.db.entity.HistoryEntity
 
 @Database(
@@ -14,6 +15,8 @@ import net.nvtoan.trackme.app.db.entity.HistoryEntity
     version = 1
 )
 abstract class TrackMeDatabase: RoomDatabase() {
+
+    abstract fun historyDao(): HistoryDao
 
     companion object {
         @Volatile

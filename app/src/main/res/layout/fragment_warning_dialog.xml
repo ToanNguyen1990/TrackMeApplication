@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup">
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="@dimen/qb_px_320"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/qb_px_36"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingStart="@dimen/qb_px_12"
+        android:paddingEnd="@dimen/qb_px_12"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/app_text_size_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerVerticalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/qb_px_48"
+        android:layout_marginStart="@dimen/qb_px_12"
+        android:layout_marginTop="@dimen/qb_px_36"
+        android:layout_marginEnd="@dimen/qb_px_12"
+        android:layout_marginBottom="@dimen/qb_px_24"
+        android:background="@drawable/bg_cancel_ripple"
+        android:elevation="@dimen/qb_px_8"
+        android:fontFamily="@font/baijamjuree_medium"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textAllCaps="true"
+        android:textColor="@color/colorWhiteTransparent40"
+        android:textSize="@dimen/app_text_size_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/centerVerticalGuideline"
+        app:layout_constraintStart_toStartOf="@id/txtMessage"
+        app:layout_constraintTop_toBottomOf="@id/txtMessage"
+        app:layout_goneMarginTop="@dimen/qb_px_32" />
+
+    <TextView
+        android:id="@+id/btnOk"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/qb_px_48"
+        android:layout_marginStart="@dimen/qb_px_12"
+        android:layout_marginEnd="@dimen/qb_px_12"
+        android:background="@drawable/bg_ok_ripple"
+        android:elevation="@dimen/qb_px_8"
+        android:fontFamily="@font/baijamjuree_medium"
+        android:gravity="center"
+        android:text="@string/dialog_ok"
+        android:textAllCaps="true"
+        android:textColor="#165FD1"
+        android:textSize="@dimen/app_text_size_14sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnCancel"
+        app:layout_constraintEnd_toEndOf="@id/txtMessage"
+        app:layout_constraintStart_toEndOf="@id/centerVerticalGuideline"
+        app:layout_constraintTop_toTopOf="@id/btnCancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

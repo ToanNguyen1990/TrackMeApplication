@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/track_me_navigation"
+    app:startDestination="@id/navigation_history">
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="net.nvtoan.trackme.app.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/goToTrainingFragment"
+            app:destination="@id/trainingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="net.nvtoan.trackme.app.ui.home.TrainingFragment"
+        android:label="TrainingFragment"
+        tools:layout="@layout/fragment_training" />
+</navigation>
