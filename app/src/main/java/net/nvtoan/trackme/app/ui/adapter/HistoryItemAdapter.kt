@@ -1,5 +1,6 @@
 package net.nvtoan.trackme.app.ui.adapter
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -60,16 +61,16 @@ class HistoryItemAdapter:
 
         init {
             with(itemView.googleMapView) {
-//                mapViewList.add(itemView.googleMapView)
                 itemView.googleMapView.onCreate(null)
                 itemView.googleMapView.getMapAsync(this@HistoryItemViewHolder)
             }
         }
 
+        @SuppressLint("SetTextI18n")
         override fun bind(item: HistoryEntity, position: Int) {
             super.bind(item, position)
             historyEntity = item
-            itemView.txtDistance.text = (item.distance / 1000).convertToString()
+            itemView.txtDistance.text = "${(item.distance / 1000).convertToString()} km"
             itemView.txtAvgSpeed.text = getAverageSpeed(item.speedList)
             itemView.txtDuration.text = item.durationTime.convertToTimeString()
             itemView.googleMapView.tag = item
@@ -80,7 +81,9 @@ class HistoryItemAdapter:
             Timber.i("onMapReady")
             MapsInitializer.initialize(itemView.context)
             this.googleMap = googleMap ?: return
-            this.googleMap?.uiSettings?.isMapToolbarEnabled = false
+            this.googleMap?.uiSettings?.isZoomGesturesEnabled = false
+            this.googleMap?.uiSettings?.isMapToolbarEnabled = true
+            this.googleMap?.uiSettings?.setAllGesturesEnabled(false)
             drawMapContent()
         }
 

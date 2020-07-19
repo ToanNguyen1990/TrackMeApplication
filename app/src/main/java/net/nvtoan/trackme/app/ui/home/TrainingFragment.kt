@@ -162,10 +162,17 @@ class TrainingFragment: HMBindingFragment<FragmentTrainingBinding>(R.layout.frag
             fusedLocationClient.lastLocation.addOnSuccessListener { location ->
                 startLocation = location
                 val startLatLng = LatLng(location.latitude, location.longitude)
+
+                val startOptions = MarkerOptions().position(startLatLng)
+                    .icon(BitmapDescriptorFactory.fromBitmap(ResourceUtil.getBitmap(context, R.drawable.ic_circle_green)))
+                    .anchor(0.5f,0.5f)
+                startMarker = googleMap?.addMarker(startOptions)
+
                 val markerOptions = MarkerOptions().position(startLatLng)
                     .icon(BitmapDescriptorFactory.fromBitmap(ResourceUtil.getBitmap(context, R.drawable.ic_my_location_24px)))
                     .anchor(0.5f,0.5f)
                 currentMarker = googleMap?.addMarker(markerOptions)
+
                 googleMap?.animateCamera(CameraUpdateFactory.newLatLng(startLatLng))
                 viewModel.updateHistoryEntity(location)
             }
@@ -199,15 +206,8 @@ class TrainingFragment: HMBindingFragment<FragmentTrainingBinding>(R.layout.frag
                 txtSpeed.text = viewModel.convertSpeedToString(historyEntity.currentSpeed)
 
                 if (points.size < 1) return
-
-                if (startMarker == null && historyEntity.distance > 30) {
-                    val markerOptions = MarkerOptions().position(points[0])
-                        .icon(BitmapDescriptorFactory.fromBitmap(ResourceUtil.getBitmap(context, R.drawable.ic_circle_green)))
-                        .anchor(0.5f,0.5f)
-                    startMarker = googleMap?.addMarker(markerOptions)
-                }
-
                 currentMarker?.position = points[points.size - 1]
+                googleMap?.moveCamera(CameraUpdateFactory.newLatLng(points[points.size - 1]))
             } catch (e: Exception) {
                 Timber.i("drawLines exception: $e")
             }

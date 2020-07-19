@@ -21,7 +21,7 @@
 	<string name="speed_default">0.0</string>
 	<string name="km">Km</string>
 	<string name="duration">Duration</string>
-	<string name="speed">Speed</string>
+	<string name="speed">Speed (km/h)</string>
 
 	<string name="start">Start</string>
 	<string name="pause">Pause</string>

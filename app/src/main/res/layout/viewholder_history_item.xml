@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             map:liteMode="true"
             map:mapType="none"
+            android:clickable="false"
             android:layout_height="@dimen/qb_px_210" />
 
         <LinearLayout

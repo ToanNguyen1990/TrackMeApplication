@@ -114,7 +114,7 @@ class TrainingViewModel: HMViewModel() {
     }
 
     fun convertSpeedToString(speed: Float): String {
-        return "${String.format("%.1f", speed)} km/h"
+        return String.format("%.1f", speed)
     }
 
     private fun getDistance(points: List<LatLng>): Double {
