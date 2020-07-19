@@ -16,6 +16,10 @@ class MainActivity : HMBindingActivity<ActivityMainBinding>(R.layout.activity_ma
 
     private lateinit var navController: NavController
 
+    override fun isRequiredUserBackButton(): Boolean {
+        return false
+    }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when(requestCode) {
