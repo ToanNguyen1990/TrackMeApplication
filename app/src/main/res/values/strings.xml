@@ -2,6 +2,7 @@
 	<string name="app_name">TrackMe</string>
 	<string name="app_notification_channel_id_updated_location" translatable="false">app_notification_channel_id_updated_location</string>
 	<string name="app_notification_channel_name_updated_location" translatable="false">app_notification_channel_name_updated_location</string>
+	<string name="location_update">Location update</string>
 
 	// bottom navigation menu
 	<string name="app_menu_history">History</string>

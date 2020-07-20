@@ -3,6 +3,7 @@ package net.nvtoan.trackme.app.ui.home
 import android.content.Context
 import android.graphics.Color
 import android.location.Location
+import android.os.Looper
 import android.view.View
 import android.widget.Toast
 import androidx.databinding.ObservableField
@@ -190,7 +191,7 @@ class TrainingFragment: HMBindingFragment<FragmentTrainingBinding>(R.layout.frag
                     }
                 }
             }
-            LocationServices.getFusedLocationProviderClient(context).requestLocationUpdates(locationRequest, locationCallback, null)
+            LocationServices.getFusedLocationProviderClient(context).requestLocationUpdates(locationRequest, locationCallback, Looper.myLooper())
         }
 
         private fun drawSessionOnMap(historyEntity: HistoryEntity) {

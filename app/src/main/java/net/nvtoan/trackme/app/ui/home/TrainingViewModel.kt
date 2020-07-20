@@ -125,7 +125,7 @@ class TrainingViewModel: HMViewModel() {
         return total
     }
 
-    fun distanceBetweenTwoPoint(oldPoint: LatLng, newPoint: LatLng): Double {
+    private fun distanceBetweenTwoPoint(oldPoint: LatLng, newPoint: LatLng): Double {
         return SphericalUtil.computeDistanceBetween(oldPoint, newPoint)
     }
 
